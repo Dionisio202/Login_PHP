@@ -9,6 +9,13 @@
     <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/demo/demo.css">
     <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+    <script>
+      console.log(sessionStorage.getItem('user_id'))
+      
+      if(sessionStorage.getItem('user_id') === null) {
+        window.location.href = 'index.php?action=login';
+      }
+    </script>
 </head>
 <body>
     <h2>Basic CRUD Application</h2>

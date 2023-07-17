@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="views/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ejecuta inmediatamente al montarse la pag-->
+    <script>
+      if(sessionStorage.getItem('user_id') !== null) {
+        window.location.href = 'index.php?action=servicios';
+      }
+    </script>
 </head>
 <body>
 
@@ -13,7 +19,7 @@
         <div class="form-content">
             <h1 id="title">INICIAR SESIÓN</h1>
             <?php  
-                include "../controller/login.php";
+                include "controller/login.php";
             ?>
             <form method="POST" action="">
                 <div class="input-group">
