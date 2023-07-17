@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/themes/color.css">
+    <script type="text/javascript" src="/jquery.min.js"></script>
+    <script type="text/javascript" src="/jquery.easyui.min.js"></script>
+    <script src="estudiante.js"></script>
+</head>
+<body>
+    <div id="dlg" class="easyui-dialog" style="width:400px">
+        <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
+            <h3>INFORMACIÓN ESTUDIANTE</h3>
+            <div style="margin-bottom:10px">
+                <input name="firstname" class="easyui-textbox" id="cedula" required="true" label="Cedula:" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="lastname" class="easyui-textbox" id="nombre" required="true" label="Nombre:" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="phone" class="easyui-textbox" id="apellido" required="true" label="Apellido:" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="email" class="easyui-textbox" id="edad" required="true" label="Edad" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="email" class="easyui-textbox" id="telefono" required="true" label="Telefono" style="width:100%">
+            </div>
+        </form>
+        <div id="dlg-buttons">
+            <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="devolverEstudiante()" style="width:90px">Save</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+        </div>
+    </div>
+</body>
+</html>

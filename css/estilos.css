@@ -1,0 +1,59 @@
+body{
+    background: #F5F5F5;
+}
+header{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    color: black;
+    font-size: 20px;
+}
+img{
+    width: 100%;
+}
+nav{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background: #a01c26;
+}
+ul {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+li{
+    position: relative;
+    display: inline-block;
+    margin: auto;   
+    width: 24%;
+    line-height: 50px;
+    list-style: none;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: yellow;
+}
+article{
+    position: relative;
+    padding: 5px;
+}
+
+aside{
+    position: relative;
+    padding: 5px;
+}
+
+footer{
+    background: #a01c26;
+    color: white;
+    text-align: center;
+    font-size: medium;
+}
