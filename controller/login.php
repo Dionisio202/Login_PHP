@@ -1,11 +1,5 @@
 <?php
-    include "../models/conexion.php";
-    session_start();
-    if(isset($_SESSION['usuario'])){
-        // Redirigir al usuario a la página de servicios
-        header("location:../index.php?action=logeado");
-        exit(); // Detener la ejecución del script
-    }
+    include "models/conexion.php";
 
     if(!empty($_POST["ingresar"])){
         if(empty($_POST["usuario"])){
@@ -20,8 +14,18 @@
             if($sql->num_rows>0){
                 $datos=$sql->fetch_array();
                 if($datos['password']===$contrasena){
-                    $_SESSION['usuario'] = $usuario;
-                    header("location:../index.php?action=logeado");
+                    $redirectionUrl = 'index.php?action=servicios';
+                
+                    $jsRedirect = <<<EOT
+                    <script>
+                      sessionStorage.setItem('user_id', '$results[id]');
+                      window.location.href = '$redirectionUrl';
+                    </script>
+                    EOT;
+                  
+                    echo $jsRedirect;
+
+                    // header("location:../index.php?action=logeado");
                 }else{
                     echo "Contraseña incorrecta";
                 }
